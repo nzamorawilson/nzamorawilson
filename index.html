@@ -85,12 +85,11 @@
       var marker = L.marker([row.New_Lat, row.New_Long], {
         opacity: 1
       }).bindPopup(row.Title);
-      
-      marker.addTo(map);
+      markers.addLayer(marker);
     }
 
   });
-
+  map.addLayer(markers);
   map.attributionControl.setPrefix(
     'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
   );
