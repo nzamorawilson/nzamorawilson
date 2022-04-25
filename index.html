@@ -84,6 +84,11 @@
 
       var marker = L.marker([row.New_Lat, row.New_Long], {
         opacity: 1
+    // Customize your icon
+  icon: L.icon({
+    iconUrl: 'placeholder.png',
+    iconSize: [40, 60]
+  })
       }).bindPopup(row.Title);
       markers.addLayer(marker);
     }
